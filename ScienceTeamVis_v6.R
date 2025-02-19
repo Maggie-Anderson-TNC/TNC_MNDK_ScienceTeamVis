@@ -122,12 +122,3 @@ hmm <- visNetwork(nodes, edges, width = "100%", height = "1200px",
 # Save the network plot as an HTML file
 setwd("C:/Users/maggie.anderson/Box/R_projects/Misc/ScienceTeamVis/ScienceTeamVis_CurrentVersion") # working directory on my PC
 visSave(hmm, file = "employee_project_network_v6.html")
-
-# Publish
-pacman::p_load(rsconnect)
-
-rsconnect::setAccountInfo(name='maggie-anderson-tnc',
-                          token='1F478C9BBAEBDDBBFE11F97BF3787AF1',
-                          secret='glZPv9Uat6N1Zetz+1e22Xy757VhFNoBGvDivfNj')
-
-rsconnect::deployApp(appDir = getwd())
